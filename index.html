@@ -1,5 +1,159 @@
 <html>
+  <head>
+    <title>Alejandro's Portfolio</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <link href="assets/css/style.css" rel="stylesheet" />
     <body>
-        <h1>Hi!!!</h1>
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">MIT MERN</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a href="#" onclick="showSection(0);">Home</a>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#"
+                >Projects <span class="caret"></span
+              ></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#" onclick="showSection(1);">Projects Summary </a>
+                </li>
+                <li>
+                  <a href="#" onclick="showSection(2);">Pac-Man Exercise </a>
+                </li>
+                <li><a href="#" onclick="showSection(3);">Eye Exercise</a></li>
+                <li>
+                  <a href="#" onclick="showSection(4);"
+                    >Real Time Bus Tracking</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div id="bio" class="sectionblock">
+          <h3>Video Embedded</h3>
+          <p>
+            <iframe
+              width="1238"
+              height="696"
+              src="https://www.youtube.com/embed/y1BT-gqaPao"
+              title="Costa Rica Travel in 2 Minutes"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </p>
+
+          <h3>Bio</h3>
+          <ul>
+            <li>
+              <p>
+                Hi, I'm from Costa Rica, I have a bachelor degree on Computer
+                Science from Instituto Tecnologico de Costa Rica, my
+                professional carrer started back on 2001 on Intel @ Costa Rica
+                factory, then moved to multiple projects related with server
+                side setups and data centers.
+              </p>
+              <p>
+                I'm currently running my startup project with some clients from
+                Latin America, focus on Retail Systems, Turnkey Webstite
+                platforms and custom development.
+              </p>
+              <p>
+                For the last 3+ years Javascript has come my primary development
+                language/engine with multiple projects on NodeJS and WebSockets,
+                as an old school programmer I love
+                <a href="http://vanilla-js.com/">Vanilla JS</a> patterns.
+              </p>
+            </li>
+            <li>
+              <img
+                class="myphoto"
+                src="https://media.licdn.com/dms/image/C4E03AQFeP3qeNnEq0w/profile-displayphoto-shrink_400_400/0/1651010434704?e=1686182400&v=beta&t=Tj2BBYSd3eihFkPOTsa70e2gJUWabG8sWhraSopWcBw"
+              />
+            </li>
+            <li>GitHub username: janycr</li>
+            <li>
+              LinkedIn link:
+              <a
+                href="https://www.linkedin.com/in/alejandro-valverde-1113b8233/"
+                target="_blank"
+                >https://www.linkedin.com/in/alejandro-valverde-1113b8233/</a
+              >
+            </li>
+            <li>Best way to contact you: janycr@gmail.com</li>
+          </ul>
+        </div>
+
+        <div id="pacman" class="sectionblock" style="display: none">
+          <h3>Project title: Pac Man Exercise</h3>
+          <p>
+            <b>Links to GitHub repositories:</b>
+          </p>
+          <p>
+            <b>Description:</b> allow PacMan to reverse his trajectory once the
+            PacMan image hits the edge of the screen on the x-axis
+          </p>
+          <iframe
+            id="frame_pacman"
+            src="projects/pacman/index.html"
+            class="pacman"
+            width="100%"
+          ></iframe>
+        </div>
+
+        <div id="eye" class="sectionblock" style="display: none">
+          <h3>Project title: Eye Exercise</h3>
+          <p>
+            <b>Links to GitHub repositories:</b>
+          </p>
+          <p>
+            <b>Description:</b> the mouse movement event is used to update the
+            position of the “eye” element displayed on the page. Project task:
+            add a second “eye” element and have that element follow the mouse
+            position on the screen using the mouse events.
+          </p>
+          <iframe
+            id="frame_eye"
+            src="projects/eye/index.html"
+            class="pacman"
+            width="100%"
+          ></iframe>
+        </div>
+
+        <div id="bustracking" class="sectionblock" style="display: none">
+          <h3>Project title: Real Time Bus Tracking</h3>
+          <p>
+            <b>Links to GitHub repositories:</b>
+          </p>
+          <p>
+            <b>Description:</b> Refactor The Real Time Bus Tracker: Using data
+            from another public API and Adapting the styling.
+          </p>
+          <iframe
+            id="frame_bustracking"
+            src="projects/bustracking/index.html"
+            class="pacman"
+            width="100%"
+          ></iframe>
+        </div>
+      </div>
     </body>
+  </head>
 </html>
