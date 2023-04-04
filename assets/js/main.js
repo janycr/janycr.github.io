@@ -19,8 +19,10 @@ function showSection(section) {
       break;
   }
   $("#" + toShow).show();
-  //reload iframe with container width
-  containerWidth = $("#" + toShow).width();
-  var iframe = document.getElementById("frame_" + toShow);
-  iframe.src = iframe.src + "?width=" + containerWidth;
+  if (section > 0) {
+    //reload iframe with container width
+    containerWidth = $("#" + toShow).width();
+    var iframe = document.getElementById("frame_" + toShow);
+    iframe.src = iframe.src + "?width=" + containerWidth;
+  }
 }
